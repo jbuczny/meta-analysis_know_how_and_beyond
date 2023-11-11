@@ -2,7 +2,7 @@
 
 - [Welcome](#welcome)
 
-[Course Details](#course-details)
+[Course Details](##course-details)
 
 If you are willing to review this manuscript, please click on the link below:
 %ACCEPT_REVIEW_INVITATION%
