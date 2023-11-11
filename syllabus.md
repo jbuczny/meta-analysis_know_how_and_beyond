@@ -7,7 +7,10 @@ Meta-Analysis: Know-How and Beyond
 - [Learning Objectives](#learning-objectives)
 - [Software](#software)
 - [Literature List](#literature-list)
-- [Course Details](#course-details)
+- [Recommended Additional Sources](#recommended-additional-sources)
+- [Course Organization and Schedule](#course-organization-and-schedule)
+- [Assignments](#assignments)
+- [Grading](#grading)
 
 ## Course Characteristics
 
