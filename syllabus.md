@@ -29,6 +29,32 @@ With best regards,
 Jacek Buczny, Ph.D.
 Associate Editor
 
+I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
+
+Please respond to this invitation within the next 3 days.
+
+If you accept this invitation, I would be very grateful if you would return your review within 21 days.
+
+The manuscript abstract follows below:  I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
+
+Please respond to this invitation within the next 3 days.
+
+If you accept this invitation, I would be very grateful if you would return your review within 21 days.
+
+The manuscript abstract follows below:  I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
+
+Please respond to this invitation within the next 3 days.
+
+If you accept this invitation, I would be very grateful if you would return your review within 21 days.
+
+The manuscript abstract follows below:  I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
+
+Please respond to this invitation within the next 3 days.
+
+If you accept this invitation, I would be very grateful if you would return your review within 21 days.
+
+The manuscript abstract follows below:  
+
 
 
 
