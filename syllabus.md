@@ -21,13 +21,16 @@ Meta-Analysis: Know-How and Beyond
 | Website (signing up, etc.)   |  https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond/overview |
 
 ## Teaching Staff
-- Dr. Jacek Buczny
-  - j.buczny@vu.nl
-  - Department of Experimental and Applied Psychology, VU Amsterdam
+
+- Dr. Jacek Buczny, j.buczny@vu.nl
+- Department of Experimental and Applied Psychology, VU Amsterdam
 
 ## Course Description
 
-"Systematic reviews and meta-analyses are essential tools for summarizing evidence accurately and reliably..." (Liberati et al., 2009, p. 1). This course covers various aspects of meta-analysis, including formulating research questions, literature search, coding, and analysis using JASP software. Students will learn to report findings following PRISMA standards.
+“Systematic reviews and meta-analyses are essential tools for summarizing evidence accurately and reliably (...)” (Liberati et al., 2009, p. 1). Currently, meta-analysis is widely applied technique for a multitude of reasons. For instance, to test and advance theories. It also is applicable to many of today’s issues tackling extensive scientific research, for example, to test the robustness of the relationship between variables across cultures. It can be used not only to conclude general effected size related to the studied relationships, but it is also essential for finding and estimating publication bias. Moreover, it can be applied in an a priori power analysis in the purpose to design sample size.
+
+Within this course, students will learn how to formulate a problem and analyze it conducting a meta-analysis in JASP, a valuable open-science software. Also, students will have the opportunity to practice wide-and-far literature search and will learn how to report their findings following the PRISMA standards with professional assistance. Students will learn the basics on how to prepare and describe a meta-analytical study in a separate article as well. Moreover, students will be able to apply this technique to summarize studies described in a manuscript in order to improve argumentation and “publishability”, furthering academic and professional careers while building a strong skill-set and portfolio.
+The course is organized in a form of an interactive seminar, in which students will perform four individual assignments, one each day. After a submission of each assignment, professional feedback will be provided.
 
 ## Major Topics
 
@@ -48,7 +51,6 @@ Meta-Analysis: Know-How and Beyond
 ## Learning Objectives
 
 By the end of this course, students will be able to:
-
 - Formulate a research question for meta-analysis
 - Conduct an expansive literature search
 - Systematically review relevant literature
@@ -93,19 +95,23 @@ The requrse requires approximately 26 hours of preparation.
 - Working on assignments
 - Online live sessions (shared as recordings)
 - Hands-on approach
-- Approximately 10 hours of lectures
+- Approximately 10 hours of pre-recorded lectures
 - Maximum 30 hours of sessions (Q&A, tutorial, and feedback)
 - Individualized feedback after each assignment
 
+Finishing this course requires at least six hours of work per day after the course starts on January 10 plus the time needed to watch lectures, reading the recommended literature, incorporating feedback and finishing the final assignment. In total, you will need to spend at least 80 hours to benefit from the course.
+
 ### Schedule
 
-Schedule changes every year. In 2024, we started on January 8, and finished on January 19.
+Schedule changes every year. In 2024, we started on January 8, and finished on January 19. This is a two-week hands-on course.
 
 - **Unit 1: Introduction**
 - **Unit 2: Literature Search and Coding**
 - **Unit 3: Simple Analysis**
 - **Unit 4: Advanced Analysis**
 - **Unit 5: Reporting a Meta-Analysis and Advanced Aspects**
+
+Please note that the schedule covers all possible activities, namely, summaries of the pre-recorded lectures, Q&A sessions, exercises in JASP and RStudio, discussions, and individual consultations. Participation in each session from the beginning until the end is not a must but is encouraged. Everyone will have an opportunity to adequately plan their time spent in the course.
 
 ### Assignments
 
