@@ -14,3 +14,6 @@ Additionally, this repository contain additional materials that expand the cours
 
 ## Contact details
 Dr. Jacek Buczny, j.buczny@vu.nl
+
+## Update
+November 11, 2023
