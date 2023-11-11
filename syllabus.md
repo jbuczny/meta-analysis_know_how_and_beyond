@@ -1,12 +1,13 @@
 Meta-Analysis: Know-How and Beyond
 ================
 
-- [Course Characteristics](##-course-characteristics)
-- [Teaching Staff](##teaching-staff)
-- [Major Tpics](##major-topics)
-- [Learning Objectives](##learning-objectives)
-- [Software](##software)
-- [Course Details](##course-details)
+- [Course Characteristics](#course-characteristics)
+- [Teaching Staff](#teaching-staff)
+- [Major Tpics](#major-topics)
+- [Learning Objectives](#learning-objectives)
+- [Software](#software)
+- [Literature List](#literature-list)
+- [Course Details](#course-details)
 
 ## Course Characteristics
 
@@ -82,7 +83,9 @@ Participants must install the following software:
 ### Before Starting the Course
 
 1. Read the suggested literature.
-2. Watch the first lecture shared via Canvas. (Approximately 26 hours of preparation)
+2. Watch the first lecture shared via Canvas
+
+The requrse requires approximately 26 hours of preparation.
 
 ### Course Format
 
@@ -94,7 +97,7 @@ Participants must install the following software:
 - Maximum 30 hours of sessions (Q&A, tutorial, and feedback)
 - Individualized feedback after each assignment
 
-## Schedule
+### Schedule
 
 Schedule changes every year. In 2024, we started on January 8, and finished on January 19.
 
@@ -104,29 +107,29 @@ Schedule changes every year. In 2024, we started on January 8, and finished on J
 - **Unit 4: Advanced Analysis**
 - **Unit 5: Reporting a Meta-Analysis and Advanced Aspects**
 
-## Assignments
+### Assignments
 
 Four assignments are planned:
 
 1. **Assignment 1**
-   - Create an idea for your meta-analysis and prepare a working title.
-   - Briefly describe the goal of your meta-analysis (not more than 400 words).
+- Create an idea for your meta-analysis and prepare a working title.
+- Briefly describe the goal of your meta-analysis (not more than 400 words).
 
 2. **Assignment 2**
-   - Perform a literature search.
-   - Identify at least 8 suitable empirical articles.
-   - Prepare a search for unpublished studies.
+- Perform a literature search.
+- Identify at least 8 suitable empirical articles.
+- Prepare a search for unpublished studies.
 
 3. **Assignment 3**
-   - Create a brief protocol and a coding form.
-   - Code at least eight studies into an Excel sheet.
+- Create a brief protocol and a coding form.
+- Code at least eight studies into an Excel sheet.
 
 4. **Assignment 4**
-   - Prepare a report using JASP.
-   - Analyze effects using both fixed and random effects models.
-   - Interpret results, create plots, and perform sensitivity analysis.
+- Prepare a report using JASP.
+- Analyze effects using both fixed and random effects models.
+- Interpret results, create plots, and perform sensitivity analysis.
 
-## Grading
+### Grading
 
 To pass the course, participants must:
 - Attend online meetings
@@ -135,4 +138,3 @@ To pass the course, participants must:
 - Obtain at least 60% of points for each assignment
 
 The grade is based on performance in the assignments, using the standard Dutch grading scale (1-10; 5.5 is sufficient).
-
