@@ -1,68 +1,7 @@
-# Meta-Analysis: Know-How and Beyond 
-
-- [Welcome](#welcome)
+Meta-Analysis: Know-How and Beyond
+================
 
 [Course Details](##course-details)
-
-If you are willing to review this manuscript, please click on the link below:
-%ACCEPT_REVIEW_INVITATION%
-
-If you are unable, please click on the link below.  We would appreciate receiving suggestions for alternative reviewers:
-%DECLINE_REVIEW_INVITATION%
-
-Alternatively, you may register your response by accessing the Editorial Manager for Personality and Individual Differences as a REVIEWER using the logon credentials below:
-https://www.editorialmanager.com/paid/
-%BLINDED_USERNAME%
-
-If you need to retrieve password details, please go to: %BLINDED_PASSWORD%
-
-Reviewer Guidelines are now available to help you with your review: http://www.elsevier.com/wps/find/reviewershome.reviewers/reviewersguidelines
-
-You may submit your comments online at the above URL. There you will find spaces for confidential comments to the editor, comments for the author and a report form to be completed.
-
-Importantly, you should treat this invitation, the manuscript and your review (as well as other reviewer comments shared with you) as confidential. You must not share your review or information about the review process with anyone without the agreement of the editors and authors involved, irrespective of the publication outcome. If the manuscript is rejected by this journal and the author agrees that the submission be transferred to another Elsevier journal via the Article Transfer Service, we may securely transfer your reviewer comments and name/contact details to the receiving journal editor for their peer review purposes.
-
-Upon submission of your review report to the system, you will get access to your personalized Elsevier reviews profile page as well as the possibility of creating a public page listing your reviews across all publishers in just a few steps! See http://www.reviewerrecognition.elsevier.com and http://www.reviewerpage.com for more information.
-
-%CUSTOM_REVIEWERHUB1%
-With best regards,
-Jacek Buczny, Ph.D.
-Associate Editor
-
-I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
-
-Please respond to this invitation within the next 3 days.
-
-If you accept this invitation, I would be very grateful if you would return your review within 21 days.
-
-The manuscript abstract follows below:  I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
-
-Please respond to this invitation within the next 3 days.
-
-If you accept this invitation, I would be very grateful if you would return your review within 21 days.
-
-The manuscript abstract follows below:  I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
-
-Please respond to this invitation within the next 3 days.
-
-If you accept this invitation, I would be very grateful if you would return your review within 21 days.
-
-The manuscript abstract follows below:  I know that you are very busy, but our community would appreciate it if you could find time to review this manuscript that has recently been submitted to “Personality and Individual Differences” for publication. In view of its content, I should be most grateful if you would consent to act as assessor.  
-
-Please respond to this invitation within the next 3 days.
-
-If you accept this invitation, I would be very grateful if you would return your review within 21 days.
-
-The manuscript abstract follows below:  
-
-
-
-
-
-
-
-
-
 
 ## Course Details
 
