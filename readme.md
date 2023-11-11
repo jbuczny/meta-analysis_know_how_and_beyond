@@ -4,8 +4,7 @@ This is a repository for my meta-analysis course. Here you can find:
 - [Syllabus](https://github.com/jbuczny/meta-analysis_know_how_and_beyond/blob/main/syllabus.md)
 - (more to come)
 
-
-Visit the official VU [website](https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond).
+Visit the official VU [website](https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond) of the course to sign up.
 
 Note that if you <b> sign up </b> to the course via the VU website, you will obtain access to prerecorded lectures, get an opportunity to submit assignments, and receive feedback.
 
