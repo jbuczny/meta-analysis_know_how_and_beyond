@@ -21,7 +21,7 @@ Meta-Analysis: Know-How and Beyond
 | Form(s) of tuition           | Interactive online seminar (using Zoom), individual assignments |
 | Approximate contact hours    | 30                                                              |
 | Approximate self-study hours | 40                                                              |
-| Website (signing up, etc.)   | [For overview and sign up](https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond/overview) |
+| Website | [For overview and sign up](https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond/overview) |
 
 ## Teaching Staff
 
