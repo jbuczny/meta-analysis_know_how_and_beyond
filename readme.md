@@ -9,6 +9,10 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 
 <span style="color:grey">Additionally, this repository contains additional materials that expand the course by reflecting the current developments in the field of meta-analysis.</span>
 
+## Co-authored meta-analytic projects
+- [The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis](https://osf.io/w3syv/)
+- [Gender Differences in Impostor Feelings: A Meta-Analysis](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443)
+
 ## Contact details
 Dr. Jacek Buczny, j.buczny@vu.nl
 
