@@ -1,11 +1,16 @@
 Meta-Analysis: Know-How and Beyond
 ================
 
-[Course Details](##course-details)
+- [Course Characteristics](##course-characteristics)
+- [Teaching Staff](##teaching-staff)
+- [Major Tpics](##major-topics)
+- [Learning Objectives](##learning-objectives)
+- [Software](##software)
+- [Course Details](##course-details)
 
-## Course Details
+## Course Characteristics
 
-| Characteristics              | Details                                                         |
+| Characteristic               | Details                                                         |
 |------------------------------|-----------------------------------------------------------------|
 | Level                        | Master's, PhD                                                   |
 | Study credits                | 3 ECTS                                                          |
