@@ -118,22 +118,22 @@ Please note that the schedule covers all possible activities, namely, summaries 
 
 ### Assignments
 
-Four assignments are planned:
+Four assignments are planned.
 
-1. **Assignment 1**
+**Assignment 1**
 - Create an idea for your meta-analysis and prepare a working title.
 - Briefly describe the goal of your meta-analysis (not more than 400 words).
 
-2. **Assignment 2**
+**Assignment 2**
 - Perform a literature search.
 - Identify at least 8 suitable empirical articles.
 - Prepare a search for unpublished studies.
 
-3. **Assignment 3**
+**Assignment 3**
 - Create a brief protocol and a coding form.
 - Code at least eight studies into an Excel sheet.
 
-4. **Assignment 4**
+**Assignment 4**
 - Prepare a report using JASP.
 - Analyze effects using both fixed and random effects models.
 - Interpret results, create plots, and perform sensitivity analysis.
@@ -146,4 +146,4 @@ To pass the course, participants must:
 - Submit all assignments
 - Obtain at least 60% of points for each assignment
 
-The grade is based on performance in the assignments, using the standard Dutch grading scale (1-10; 5.5 is sufficient).
+The grade is based on performance in the assignments, using the standard the Dutch grading scale (1-10; 5.5 is sufficient).
