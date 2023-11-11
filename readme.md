@@ -5,8 +5,7 @@ https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-h
 
 This is a repository for my meta-analysis course. Here you can find:
 - Syllabus
-- Slides
-- Examples of R code
+- (more to come)
 
 Note that if you <b> sign up </b> to the course via the VU website, you will obtain access to prerecorded lectures, get an opportunity to submit assignments, and receive feedback.
 
