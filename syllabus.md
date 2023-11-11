@@ -1,7 +1,7 @@
 Meta-Analysis: Know-How and Beyond
 ================
 
-- [Course Characteristics](##course-characteristics)
+- [Course Characteristics](##-course-characteristics)
 - [Teaching Staff](##teaching-staff)
 - [Major Tpics](##major-topics)
 - [Learning Objectives](##learning-objectives)
