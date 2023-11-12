@@ -2,7 +2,7 @@
 
 This course promotes open science practices, research synthesis standards, and stronger science in general.
 
-This is a repository for my course "Meta-Analysis: Know How and Beyond". Here you can find:
+This is a repository for my course "Meta-Analysis: Know How and Beyond". Here, you can find:
 - [Syllabus](https://github.com/jbuczny/meta-analysis_know_how_and_beyond/blob/main/syllabus.md)
 
 Visit the official VU [website](https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond) of the course to sign up. Note that if you sign up to the course via the VU website, you will obtain access to prerecorded lectures, get an opportunity to submit assignments, and receive feedback.
