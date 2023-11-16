@@ -17,4 +17,4 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 Dr. Jacek Buczny, j.buczny@vu.nl
 
 ## Update
-November 11, 2023
+November 16, 2023
