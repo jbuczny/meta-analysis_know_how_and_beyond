@@ -13,7 +13,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis", [article](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749), [OSF materials](https://osf.io/w3syv/)
 - [Gender Differences in Impostor Feelings: A Meta-Analysis](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443)
 
-## Publications of my students
+## Publications of My students
 - "Deferred cord clamping to improve neonatal blood values. A systematic review and meta-analysis", [article](https://www.sciencedirect.com/science/article/pii/S0020748924000300)
 
 ## Contact Details
