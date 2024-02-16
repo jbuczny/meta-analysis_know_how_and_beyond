@@ -11,7 +11,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 
 ## Co-Authored Meta-Analytic Projects
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis", [article](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749), [OSF materials](https://osf.io/w3syv/)
-- "[Gender Differences in Impostor Feelings: A Meta-Analysis"](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443)"
+- "[Gender Differences in Impostor Feelings: A Meta-Analysis](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443)"
 - "[Systematic review and meta-analysis of the effects of fatigue as a result of activity on gait stability and fall-related spatiotemporal parameters in community-dwelling elderly"](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662)"
 
 ## Publications of My students
