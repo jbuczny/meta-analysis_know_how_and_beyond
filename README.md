@@ -14,7 +14,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 - "[Gender Differences in Impostor Feelings: A Meta-Analysis](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443)"
 - "[Systematic Review and Meta-Analysis of the Effects of Fatigue as a Result of Activity on Gait Stability and Fall-Related Spatiotemporal Parameters in Community-Dwelling Elderly](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662)"
 
-## Publications of My students
+## Publications of My Students
 - "Deferred cord clamping to improve neonatal blood values. A systematic review and meta-analysis", [article](https://www.sciencedirect.com/science/article/pii/S0020748924000300)
 
 ## Contact Details
