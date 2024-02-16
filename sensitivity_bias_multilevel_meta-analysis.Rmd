@@ -1,0 +1,545 @@
+---
+title: "Publication Bias and Sensitivity Analysis for Multilevel Models"
+author: "Dr. Jacek Buczny, Vrije Universiteit Amsterdam"
+output: pdf_document
+date: "latest update: `r format(Sys.time(), '%d %B %Y')`"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE
+                      , message = TRUE
+                      , warning = TRUE
+                      , tidy = TRUE
+                      , cache = TRUE
+                      , echo = TRUE)
+```
+
+```{r loading packages, include = FALSE}
+library(metaplus)
+library(future)
+library(parallelly)
+library(parallel)
+library(PublicationBias)
+library(dplyr)
+library(ggplot2)
+library(phacking)
+library(multibiasmeta)
+library(utils)
+```
+
+```{r, include = FALSE}
+## Using multiple cores to speed up processing
+if (parallelly::supportsMulticore()) {
+  plan(multicore) 
+} else {
+  plan(multisession)
+}
+```
+
+## Identification of outliers
+
+### (1)
+
+### Robust variance estimation
+
+In-depth tutorial:
+<https://cran.r-project.org/web/packages/metaplus/vignettes/metaplus-package.pdf>
+
+```{r}
+## Creating a metaplus object
+
+## Correction for outliers
+
+res1_plus <- metaplus(yi = yi ## to adjust
+                      , sei = sqrt(vi) ## to adjust, this is SE
+                      , mods = NULL ## For models with moderators
+                      , slab = Author ## to adjust
+                      , random = "t-dist"
+                      , plotci = TRUE
+                      , justfit = FALSE
+                      , cores = max(detectCores()%/%2
+                                   , 1)
+                      , data = my_data) ## to adjust
+
+summary(res1_plus)
+```
+
+### (2)
+
+```{r}
+## Testing for outliers for t-dist
+
+## Calculating bootstrap CIs can take up to 10 minutes
+
+testOutliers(res1_plus
+             , R = 1000 ## Change if too slow
+             , cores = max(detectCores()%/%2
+                           , 1))
+## If observed = 0, no outliers
+```
+
+## Correction of bias
+
+In-depth tutorial:
+<https://mathurlabstanford.github.io/multibiasmeta/articles/tutorial.html>
+
+### (1)
+
+#### Calculating a fixed model (no heterogeneity)
+
+```{r}
+res0_PubBias <- pubbias_meta(yi = my_data$yi ## to adjust
+                            , vi = my_data$vi ## to adjust
+                            , model = "fixed"
+                            , selection_ratio = 2)
+
+summary(res0_PubBias)
+
+## An interpretation of res0_PubBias
+
+## This fixed-effects meta-analysis indicates that if affirmative
+## (i.e., significant and positive) studies were 2 times more likely
+## to be published than non-affirmative (i.e., non-significant or negative)
+## studies, the meta-analytic point estimate corrected for publication bias
+## would be 0.??, 95% CI [0.??, 0.??].
+```
+
+#### Calculating a corrected effect
+
+Attached worst-case-scenario meta-analysis.
+
+For a chosen ratio of publication probabilities (selection ratio),
+estimate a publication bias-corrected pooled point estimate and 95%
+confidence interval.
+
+```{r}
+res1_PubBias <- pubbias_meta(yi = my_data$yi ## to adjust
+                        , vi = my_data$vi ## to adjust
+                        , cluster = my_data$study_id ## to adjust
+                        , selection_ratio = 2 ## to adjust
+                        , selection_tails = 1 ## to adjust
+                        , model_type = "robust"
+                        , favor_positive = FALSE ## to adjust
+                        , alpha_select = 0.05
+                        , ci_level = 0.95
+                        , small = TRUE
+                        , return_worst_meta = TRUE)
+
+summary(res1_PubBias)
+```
+
+#### An interpretation of res1_PubBias
+
+This random-effects meta-analysis indicates that, if affirmative (i.e.,
+significant and positive) studies were 2 times more likely to be
+published than non-affirmative (i.e., non-significant or negative)
+studies, the meta-analytic point estimate corrected for publication bias
+would be 0.??, 95% CI [0.06, 0.20].
+
+Note that people tend to publish statistically significant effects
+regardless the direction. It can be specified for every function that
+contains the argument "selection_tails" – in such case, the setting
+should be "selection_tails = 2".
+
+#### An appendix can be created to present a plot for different levels of selection ratio
+
+```{r}
+selection_ratios <- c(200
+                      , 150
+                      , 100
+                      , 60
+                      , 45
+                      , 30
+                      , 15
+                      , seq(15
+                            , 1))
+```
+
+#### Computing estimate for each value of selection_ratio
+
+```{r}
+estimates <- lapply(selection_ratios
+                    , function(e_selection_ratio) {
+  pubbias_meta(yi = my_data$yi
+               , vi = my_data$vi
+               , cluster = my_data$study_id
+               , selection_ratio = e_selection_ratio
+               , model_type = "robust"
+               , favor_positive = TRUE)$stats
+})
+
+estimates <- dplyr::bind_rows(estimates)
+estimates$selection_ratio <- selection_ratios
+
+ggplot(estimates
+       , aes(x = selection_ratio
+             , y = estimate)) +
+  geom_ribbon(aes(ymin = ci_lower
+                  , ymax = ci_upper)
+              , fill = "gray") +
+  geom_line(lwd = 1.2) +
+  labs(x = bquote(eta)
+       , y = bquote(hat(mu)[eta])) +
+  theme_classic()
+```
+
+#### A sample of results description
+
+If affirmative (i.e., significant and positive) studies were 2 times
+more likely to be published than non-affirmative (i.e., non-significant
+or negative) studies, the meta-analytic point estimate corrected for
+publication bias would be 0.15, 95% CI [0.13, 0.18].
+
+If there were worst-case publication bias (i.e., that favors affirmative
+results infinitely more than non-affirmative results), the corrected
+meta-analytic point estimate would be 0.092, 95% CI [0.07, 0.11].
+
+### (2)
+
+#### Severity of publication bias needed to "explain away" results
+
+It estimates the S-value, defined as the severity of publication bias
+(i.e., the ratio by which affirmative studies are more likely to be
+published than non-affirmative studies) that would be required to shift
+the pooled point estimate or its confidence interval limit to the value
+q.
+
+q = the attenuated value to which to shift the point estimate or CI;
+should be specified on the same scale as yi.
+
+```{r}
+res1_PubBias_S <- pubbias_svalue(yi = my_data$yi ## to adjust
+                                 , vi = my_data$vi ## to adjust
+                                 , cluster = my_data$study_id ## to adjust
+                                 , q = 0.14 ## to adjust
+                                 , model_type = "robust"
+                                 , favor_positive = TRUE ## to adjust
+                                 , alpha_select = 0.05
+                                 , ci_level = 0.95
+                                 , small = TRUE
+                                 , selection_ratio_max = 10 ## to adjust
+                                 , return_worst_meta = TRUE)
+
+summary(res1_PubBias_S)
+```
+
+#### A sample of an output
+
+Publication bias required to shift point estimate to 0.14: 3
+
+Publication bias required to shift CI limit to 0.14: 1.3
+
+#### A sample of results description
+
+For the point estimate corrected for publication bias to shift to 0.14
+affirmative (i.e., significant and positive) studies would need to be 3
+times more likely to be published than non-affirmative (i.e,
+non-significant or negative) studies.
+
+For the CI bound corrected for publication bias to shift to 0.14,
+affirmative (i.e., significant and positive) studies would need to be
+1.3 times more likely to be published than non-affirmative (i.e,
+non-significant or negative) studies.
+
+Note: the thresholds for S-values available at <https://osf.io/p3xyd/>.
+
+### (3)
+
+#### Plotting assuming bias
+
+It creates a modified funnel plot that distinguishes between affirmative
+and non-affirmative studies, helping to detect the extent to which the
+non-affirmative studies' point estimates are systematically smaller than
+the entire set of point estimates. The estimate among only
+non-affirmative studies (gray diamond) represents a corrected estimate
+under worst-case publication bias. If the gray diamond represents a
+negligible effect size or if it is much smaller than the pooled estimate
+among all studies (black diamond), this suggests that the meta-analysis
+may not be robust to extreme publication bias. Numerical sensitivity
+analyses (via pubbias_svalue()) should still be carried out for more
+precise quantitative conclusions.
+
+```{r}
+res1_PubBias_funnel <- significance_funnel(yi = my_datar$yi ## to adjust
+                                           , vi = my_datar$vi ## to adjust
+                                           , favor_positive = FALSE ## to adjust
+                                           , alpha_select = 0.05
+                                           , plot_pooled = TRUE
+                                           , est_all = NA
+                                           , est_worst = NA
+                                           , xmin = min(my_data$yi) ## to adjust
+                                           , xmax = max(my_data$yi) ## to adjust
+                                           , ymin = 0
+                                           , ymax = max(sqrt(my_data$vi)) ## to adjust
+                                           , xlab = "Effect Size (XYZ)" ## to adjust
+                                           , ylab = "Estimated Standard Error")
+
+res1_PubBias_funnel
+```
+
+### (4)
+
+#### *p*-hacking detection and correction of effect size
+
+Unlike publication bias alone, *p*-hacking that favors significant,
+positive results (termed “affirmative”) can distort the distribution of
+affirmative results. To bias-correct results from affirmative studies
+would require strong assumptions on the exact nature of *p*-hacking.
+
+In contrast, joint *p*-hacking and publication bias do not distort the
+distribution of published non-affirmative results when there is
+stringent *p*-hacking (e.g., investigators who hack always eventually
+obtain an affirmative result) or when there is stringent publication
+bias (e.g., non-affirmative results from hacked studies are never
+published). This means that any published non-affirmative results are
+from unhacked studies. Under these assumptions, RTMA involves analyzing
+only the published non-affirmative results to essentially impute the
+full underlying distribution of all results prior to selection due to
+*p*-hacking or publication bias.
+
+This app also produces diagnostic plots described in Mathur (2022).
+
+Correcting for *p*-hacking and publication bias, we can estimate a point
+estimate and 95% confidence interval for the meta-analytic mean and the
+standard deviation of the effects (i.e., heterogeneity).
+
+```{r}
+res1_PubBias_phacking <- phacking_meta(yi = my_data$yi ## to adjust
+                                       , vi = my_data$vi ## to adjust
+                                       , favor_positive = TRUE ## to adjust
+                                       , alpha_select = 0.05
+                                       , ci_level = 0.95
+                                       , stan_control = list(adapt_delta = 0.98
+                                                             , max_treedepth = 20)
+                                                             ## to adjust
+                                       , parallelize = TRUE)
+
+res1_PubBias_phacking$stats
+## Report mode as the main statistic
+```
+
+#### A sample of an output
+
+Uncorrected estimate: 0.25 (95% CI [0.2, 0.29])
+
+Worst case estimate: -0.001 (95% CI [-0.027, 0.024])
+
+Corrected mean (μ) estimate: 0.031 (95% CI [-0.0092, 0.093])
+
+Corrected heterogeneity (τ) estimate: 0.1 (95% CI [0.036, 0.18])
+
+#### A sample of results description
+
+Accounting for potential *p*-hacking and publication bias that favor
+affirmative results, the estimated meta-analytic mean (μ) is 0.031, 95%
+CI [-0.0092, 0.093], and the estimated standard deviation of the
+effects, i.e., heterogeneity (τ), is 0.1, 95% CI [0.036, 0.18].
+
+Note: τ^2^ should be reported.
+
+### (5)
+
+#### Diagnostic quantile-quantile plot (right-truncated meta-analysis; RTMA)
+
+To assess the fit of right-truncated meta-analysis (if favor positive
+has been selected) and possible violations of its distributional
+assumptions, we can plot the fitted cumulative distribution function
+(CDF) of the published non-affirmative estimates versus their empirical
+CDF. If the points do not adhere fairly closely to a 45-degree line, the
+right-truncated meta-analysis may not fit adequately.
+
+```{r}
+rtma_qqplot(res1_PubBias_phacking)
+## Check if evenly distributed
+```
+
+#### Diagnostic *z*-score density plot
+
+As another diagnostic plot, we can examine the *z*-scores of all
+published point estimates. When *p*-hacking favors affirmative estimates
+over non-affirmative estimates, as our methods and others assume,
+z-scores may disproportionately concentrate just above the critical
+value (e.g., *z* = 1.96).
+
+Importantly, the presence of *p*-hacking does not guarantee a
+concentration of *z*-scores just above the critical value, so it is
+prudent to proceed with the fitting RTMA even if no such concentration
+is apparent.
+
+In contrast, if *z*-scores also concentrate just below the critical
+value, or if they also concentrate below the sign-reversed critical
+value (e.g., *z* = –1.96), this could indicate forms of p-hacking that
+violate the assumptions of RTMA.
+
+Note: check where accumulates, if around *z* = 1.96 -\> signature of
+*p*-hacking.
+
+```{r}
+z_density(yi = my_data$yi ## to adjust
+          , vi = my_datar$vi ## to adjust
+          , alpha_select = 0.05
+          , crit_color = "red")
+```
+
+### (6)
+
+#### Multiple biases
+
+In addition to publication bias and/or p-hacking, meta-analyses can be
+compromised by internal biases (e.g., confounding in non-randomized
+studies) as well as publication bias. These biases often operate
+non-additively: publication bias that favors significant, positive
+results selects indirectly for studies with more internal bias.
+
+These sensitivity analyses address two questions:
+
+(1) “For a given severity of internal bias across studies and of
+    publication bias, how much could the results change?”; and
+
+(2) “For a given severity of publication bias, how severe would internal
+    bias have to be, hypothetically, to attenuate the results to the
+    null or by a given amount?” These methods consider the average
+    internal bias across studies, obviating specifying the bias in each
+    study individually. The analyst can assume that internal bias
+    affects all studies, or alternatively a known subset (e.g.,
+    non-randomized studies).
+
+The internal bias can be of unknown origin or, for certain types of bias
+in causal estimates, can be bounded analytically. The analyst can
+specify the severity of publication bias or, alternatively, consider
+“worst-case” publication bias as described above.
+
+```{r}
+res1_PubBias_mbias <- multibias_meta(yi = my_data$yi ## to adjust
+                                     , vi = my_data$vi ## to adjust
+                                     , cluster = my_data$study_id ## to adjust
+                                     , biased = TRUE
+                                     , selection_ratio = 2 ## to adjust
+                                     , bias_affirmative = 0 ## to adjust
+                                     , bias_nonaffirmative = 0 ## to adjust
+                                     , favor_positive = TRUE ## to adjust
+                                     , alpha_select = 0.05
+                                     , ci_level = 0.95
+                                     , small = TRUE
+                                     , return_worst_meta = FALSE ## to adjust
+                                     , return_pubbias_meta = FALSE) ## to adjust
+
+summary(res1_PubBias_mbias)
+```
+
+Explanations:
+
+**biased** = Boolean indicating whether each study is considered
+internally biased; either single value used for all studies or a vector
+the same length as the number of rows in the data (defaults to all
+studies).
+
+**cluster** = between-study id (multilevel)
+
+**bias_affirmative** = Mean internal bias (effect size), on the additive
+scale, among published affirmative studies. The bias has the same units
+as yi.
+
+**bias_non-affirmative** = Mean internal bias (effect size), on the
+additive scale, among published non-affirmative studies. The bias has
+the same units as yi.
+
+**return_worst_meta** = Boolean indicating whether the worst-case
+meta-analysis of only the non-affirmative studies be returned.
+
+**return_pubbias_meta** = Boolean indicating whether a meta-analysis
+correcting for publication but not for confounding be returned.
+
+#### Additional assessment of multiple biases
+
+```{r}
+res1_PubBias_evalue <-multibias_evalue(yi = my_data$yi ## to adjust
+                                       , vi = my_data$vi ## to adjust
+                                       , cluster = my_data$study_id ## to adjust
+                                       , biased = TRUE ## to adjust
+                                       , selection_ratio = 2 ## to adjust
+                                       , q = 0.1 ## to adjust
+                                       , favor_positive = TRUE ## to adjust
+                                       , alpha_select = 0.05
+                                       , ci_level = 0.95
+                                       , small = TRUE
+                                       , bias_max = 20 ## to adjust
+                                       , assumed_bias_type = NULL) ## to adjust
+```
+
+Explanations:
+
+**biased** = Boolean indicating whether each study is considered
+internally biased; either single value used for all studies or a vector
+the same length as the number of rows in the data (defaults to all
+studies).
+
+**q** = the attenuated value to which to shift the point estimate or CI.
+Should be specified on the same scale as yi.
+
+**bias_max** = The largest value of bias, on the additive scale, that
+should be included in the grid search. The bias has the same units as
+yi.
+
+**assumed_bias_type** = List of biases to consider for computing evalues
+(objects of bias as returned by EValue::confounding(),
+EValue::selection(), EValue::misclassification()) (defaults to NULL,
+i.e. agnostic as to the nature of the internal bias).
+
+If not NULL, the yi argument must be on the log-RR scale (if yi is not
+already on that scale, use EValue::convert_measures() to make it so).
+
+For details:
+<https://cran.r-project.org/web/packages/EValue/vignettes/meta-analysis.html>
+
+#### Citation of packages
+
+```{r}
+citation(package = "metaplus")
+citation(package = "future")
+citation(package = "parallelly")
+citation(package = "parallel")
+citation(package = "PublicationBias")
+citation(package = "dplyr")
+citation(package = "ggplot2")
+citation(package = "phacking")
+citation(package = "multibiasmeta")
+citation(package = "utils")
+```
+
+#### References
+
+Ding, P., & VanderWeele, T. J. (2016). Sensitivity analysis without
+assumptions. Epidemiology, 27(3), 368-377.
+<http://doi.org/10.1097/EDE.0000000000000457>
+
+Mathur, M. B., & VanderWeele, T. J. (2019). New metrics for
+meta-analyses of heterogeneous effects. Statistics in Medicine, 38(8),
+1336–1342. <http://doi.org/10.1002/sim.8057>
+
+Mathur, M. B., & VanderWeele, T. J. (2020). Robust metrics and
+sensitivity analyses for meta-analyses of heterogeneous effects.
+Epidemiology, 31(3), 356-358.
+<http://doi.org/10.1097/EDE.0000000000001180>
+
+Mathur, M. B., & VanderWeele, T. J. (2020). Sensitivity analysis for
+publication bias in meta-analyses. Journal of the Royal Statistical
+Society: Series C (Applied Statistics), 69(5), 1091–1119.
+<http://doi.org/10.1111/rssc.12440>
+
+Mathur, M. B., & VanderWeele, T. J. (2020). Sensitivity analysis for
+unmeasured confounding in meta-analyses. Journal of the American
+Statistical Association, 115(529), 163–172.
+<http://doi.org/10.1080/01621459.2018.1529598>
+
+Mathur, M. B., & VanderWeele, T. J. (2021). Estimating publication bias
+in meta-analyses of peer-reviewed studies: A meta-meta-analysis across
+disciplines and journal tiers. Research Synthesis Methods, 12(2),
+176–191. <http://doi.org/10.1002/jrsm.1464>
+
+VanderWeele, T. J., & Ding, P. (2017). Sensitivity analysis in
+observational research: Introducing the E-value. Ann Intern Med, 167(4),
+268–274. <http://doi.org/10.7326/M16-2607>
