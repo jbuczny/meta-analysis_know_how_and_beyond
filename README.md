@@ -7,7 +7,7 @@ This is a repository for my course "Meta-Analysis: Know How and Beyond". Here, y
 
 Visit the official VU [website](https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond) of the course to sign up. Note that if you sign up to the course, you will obtain access to prerecorded lectures, get an opportunity to submit assignments, and receive feedback.
 
-<span style="color:grey">This repository contains additional materials that expand the course by reflecting the current developments in the field of meta-analysis.</span>
+<span style="color:grey">This repository contains [additional materials](https://github.com/jbuczny/meta-analysis_know_how_and_beyond/blob/main/additional_materials.md) that expand the course by reflecting the current developments in the field of meta-analysis.</span>
 
 ## Co-Authored Meta-Analytic Projects
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis", [article](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749), [OSF materials](https://osf.io/w3syv/)
