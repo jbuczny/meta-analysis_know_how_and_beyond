@@ -12,6 +12,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 ## Co-Authored Meta-Analytic Projects
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis", [article](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749), [OSF materials](https://osf.io/w3syv/)
 - "[Gender Differences in Impostor Feelings: A Meta-Analysis](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443)"
+- "[Does multidimensional structure of work-family and family-work conflict matter for stress, and job and family satisfaction? Systematic review with meta-analysis](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=337199)"
 - "[Systematic Review and Meta-Analysis of the Effects of Fatigue as a Result of Activity on Gait Stability and Fall-Related Spatiotemporal Parameters in Community-Dwelling Elderly](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662)"
 
 ## Publications of My Students
