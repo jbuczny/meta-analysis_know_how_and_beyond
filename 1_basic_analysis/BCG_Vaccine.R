@@ -1,4 +1,4 @@
-## Author: Dr. Jacek Buczny, VU Amsterdam
+## Author: Dr. Jacek Buczny, Vrije Universiteit Amsterdam
 ## Last saved: Jan 23, 2024
 
 ## Opening the data set
