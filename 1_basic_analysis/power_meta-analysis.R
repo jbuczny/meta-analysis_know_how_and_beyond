@@ -11,33 +11,34 @@ library(metapower)
 ## Simulations for various levels of effect size (here Pearson's r),
 ## study size (total N and group n), number of effect sizes, and hetereogeneity
 
-## How to interpret?
-## Use the convention of 80% power
-## Focus on the random-effects estimates
+## How to interpret results?
+## (1) Follow the 80% power convention
+## (2) Focus on the random-effects estimates
+## If a line crosses the value of .80, the power requirement is met
 
-#---
+## ---
   
-##Low effect size, low effect sizes number, low I-square
+## Low effect size, low effect sizes number, low I-square
 mpower(effect_size = .1, study_size = 100, k = 10, i2 = .25, es_type = "r")
 
-##Medium effect size, low effect sizes number, low I-square
+# #Medium effect size, low effect sizes number, low I-square
 mpower(effect_size = .3, study_size = 100, k = 10, i2 = .25, es_type = "r")
 
-##High effect size, low effect sizes number, low I-square
+## High effect size, low effect sizes number, low I-square
 mpower(effect_size = .5, study_size = 100, k = 10, i2 = .25, es_type = "r")
 
-#---
+## ---
 
-##Low effect size, low-to-medium effect sizes number, low I-square
+## Low effect size, low-to-medium effect sizes number, low I-square
 mpower(effect_size = .1, study_size = 100, k = 20, i2 = .25, es_type = "r")
 
-##Low effect size, medium effect sizes number, medium I-square
+## Low effect size, medium effect sizes number, medium I-square
 mpower(effect_size = .1, study_size = 100, k = 30, i2 = .25, es_type = "r")
 
 ##Low effect size, high effect sizes number, medium I-square
 mpower(effect_size = .1, study_size = 100, k = 50, i2 = .25, es_type = "r")
 
-#---
+## ---
 
 ##Medium effect size, low-to-medium effect sizes number, low I-square
 mpower(effect_size = .3, study_size = 100, k = 20, i2 = .25, es_type = "r")
@@ -48,114 +49,114 @@ mpower(effect_size = .3, study_size = 100, k = 30, i2 = .25, es_type = "r")
 ##Medium effect size, high effect sizes number, medium I-square
 mpower(effect_size = .3, study_size = 100, k = 50, i2 = .25, es_type = "r")
 
-#---
+## ---
 
-##High effect size, low-to-medium effect sizes number, low I-square
+## High effect size, low-to-medium effect sizes number, low I-square
 mpower(effect_size = .5, study_size = 100, k = 20, i2 = .25, es_type = "r")
 
-##High effect size, medium effect sizes number, medium I-square
+## High effect size, medium effect sizes number, medium I-square
 mpower(effect_size = .5, study_size = 100, k = 30, i2 = .25, es_type = "r")
 
-##High effect size, high effect sizes number, medium I-square
+## High effect size, high effect sizes number, medium I-square
 mpower(effect_size = .5, study_size = 100, k = 50, i2 = .25, es_type = "r")
 
-#---
+## ---
 
 ##Low effect size, low effect sizes number, medium I-square
 mpower(effect_size = .1, study_size = 100, k = 10, i2 = .50, es_type = "r")
 
-##Low effect size, low effect sizes number, high I-square
+## Low effect size, low effect sizes number, high I-square
 mpower(effect_size = .1, study_size = 100, k = 10, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##Medium effect size, low effect sizes number, medium I-square
+## Medium effect size, low effect sizes number, medium I-square
 mpower(effect_size = .3, study_size = 100, k = 10, i2 = .50, es_type = "r")
 
 ##Medium effect size, low effect sizes number, high I-square
 mpower(effect_size = .3, study_size = 100, k = 10, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##High effect size, low effect sizes number, medium I-square
+## High effect size, low effect sizes number, medium I-square
 mpower(effect_size = .5, study_size = 100, k = 10, i2 = .50, es_type = "r")
 
-##High effect size, low effect sizes number, high I-square
+## High effect size, low effect sizes number, high I-square
 mpower(effect_size = .5, study_size = 100, k = 10, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##Low effect size, low-to-medium effect sizes number, medium I-square
+## Low effect size, low-to-medium effect sizes number, medium I-square
 mpower(effect_size = .1, study_size = 100, k = 20, i2 = .50, es_type = "r")
 
-##Low effect size, low-to-medium effect sizes number, high I-square
+## Low effect size, low-to-medium effect sizes number, high I-square
 mpower(effect_size = .1, study_size = 100, k = 20, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##Low effect size, medium effect sizes number, medium I-square
+## Low effect size, medium effect sizes number, medium I-square
 mpower(effect_size = .1, study_size = 100, k = 30, i2 = .50, es_type = "r")
 
-##Low effect size, medium effect sizes number, high I-square
+## Low effect size, medium effect sizes number, high I-square
 mpower(effect_size = .1, study_size = 100, k = 30, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##Low effect size, high effect sizes number, medium I-square
+## Low effect size, high effect sizes number, medium I-square
 mpower(effect_size = .1, study_size = 100, k = 50, i2 = .50, es_type = "r")
 
-##Low effect size, high effect sizes number, high I-square
+## Low effect size, high effect sizes number, high I-square
 mpower(effect_size = .1, study_size = 100, k = 50, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##Medium effect size, low-to-medium effect sizes number, medium I-square
+## Medium effect size, low-to-medium effect sizes number, medium I-square
 mpower(effect_size = .3, study_size = 100, k = 20, i2 = .50, es_type = "r")
 
-##Medium effect size, low-to-medium effect sizes number, high I-square
+## Medium effect size, low-to-medium effect sizes number, high I-square
 mpower(effect_size = .3, study_size = 100, k = 20, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##Medium effect size, medium effect sizes number, medium I-square
+## Medium effect size, medium effect sizes number, medium I-square
 mpower(effect_size = .3, study_size = 100, k = 30, i2 = .50, es_type = "r")
 
-##Medium effect size, medium effect sizes number, high I-square
+## Medium effect size, medium effect sizes number, high I-square
 mpower(effect_size = .3, study_size = 100, k = 30, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##Medium effect size, high effect sizes number, medium I-square
+## Medium effect size, high effect sizes number, medium I-square
 mpower(effect_size = .3, study_size = 100, k = 50, i2 = .50, es_type = "r")
 
-##Medium effect size, high effect sizes number, high I-square
+## Medium effect size, high effect sizes number, high I-square
 mpower(effect_size = .3, study_size = 100, k = 50, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##High effect size, low-to-medium effect sizes number, medium I-square
+## High effect size, low-to-medium effect sizes number, medium I-square
 mpower(effect_size = .5, study_size = 100, k = 20, i2 = .50, es_type = "r")
 
-##High effect size, low-to-medium effect sizes number, high I-square
+## High effect size, low-to-medium effect sizes number, high I-square
 mpower(effect_size = .5, study_size = 100, k = 20, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##High effect size, medium effect sizes number, medium I-square
+## High effect size, medium effect sizes number, medium I-square
 mpower(effect_size = .5, study_size = 100, k = 30, i2 = .50, es_type = "r")
 
-##High effect size, medium effect sizes number, high I-square
+## High effect size, medium effect sizes number, high I-square
 mpower(effect_size = .5, study_size = 100, k = 30, i2 = .75, es_type = "r")
 
-#---
+## ---
 
-##High effect size, high effect sizes number, medium I-square
+## High effect size, high effect sizes number, medium I-square
 mpower(effect_size = .5, study_size = 100, k = 50, i2 = .50, es_type = "r")
 
-##High effect size, high effect sizes number, high I-square
+## High effect size, high effect sizes number, high I-square
 mpower(effect_size = .5, study_size = 100, k = 50, i2 = .75, es_type = "r")
 
-##Creating realistic assumptions
+## Creating realistic assumptions
 
 RH_power_1 <- mpower(effect_size = .1, study_size = 100, k = 30, i2 = .75, es_type = "r")
 print(RH_power_1)
@@ -172,7 +173,7 @@ print(RH_power_4)
 RH_power_5 <- mpower(effect_size = .1, study_size = 100, k = 30, i2 = .95, es_type = "r")
 print(RH_power_5)
 
-##Plotting power
+## Plotting power
 
 plot_mpower(RH_power_1)
 
@@ -184,7 +185,7 @@ plot_mpower(RH_power_4)
 
 plot_mpower(RH_power_5)
 
-##Power analysis for moderators; creating realistic assumptions
+## Power analysis for moderators; creating realistic assumptions
 
 RH_power_6 <- subgroup_power(n_groups = 2, 
                              effect_sizes = c(.0, .2), 
@@ -326,7 +327,7 @@ RH_power_25 <- mod_power(n_groups = 3,
                          i2 = .95,
                          es_type = "r")
 
-##Plotting power for subgroup/moderator analyzes
+## Plotting power for subgroup/moderator analyzes
 
 plot_subgroup_power(RH_power_6)
 
