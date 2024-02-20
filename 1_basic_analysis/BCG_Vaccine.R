@@ -1,3 +1,4 @@
+## Title: Basic analysis of the classic BCG data set
 ## Author: Dr. Jacek Buczny, Vrije Universiteit Amsterdam
 ## Last saved: Jan 23, 2024
 
