@@ -1,0 +1,352 @@
+---
+title: "Power analysis for Dependent-Effect-Sizes/Multilevel Meta-Analysis"
+author: "Dr. Jacek Buczny, Vrije Universiteit Amsterdam"
+output: pdf_document
+date: "latest update: `r format(Sys.time(), '%d %B %Y')`"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE
+                      , message = TRUE
+                      , warning = TRUE
+                      , tidy = TRUE
+                      , cache = TRUE)
+```
+
+```{r loading packages, include = FALSE}
+library(POMADE)
+library(future)
+library(parallel)
+library(parallelly)
+library(dplyr)
+library(writexl)
+library(utils)
+```
+
+## Introduction
+
+This script is create to simulate power analysis for Pearson's *r*.
+
+It is assumed that 0.1 is small effect size, 0.3 is medium, and 0.5 is
+large effect size.
+
+For a tutorial visit: <https://mikkelvembye.github.io/POMADE/>
+
+### Explanation
+
+mu = effect size tau = between-study heterogeneity omega = differences
+(heterogeneity) within studies rho = correlations between effect sizes
+within studies
+
+model, CHE = correlated and hierarchical effect sizes model, CE =
+correlated effect sizes model, MLMA = multilevel effect sizes
+
+var_df, RVE = recommended method to calculate degrees of freedom
+
+sigma2_dist = distribution of sampling variance estimates from each
+study
+
+n_ES_dist = the average number of effect sizes per study, usually
+related to the number of expected outcomes at the primary-study level
+
+## Running an a priori power analysis for single-core computation
+
+```{r seqential}
+plan(sequential)
+```
+
+Running single-core calculations with measuring clock time. Seed is used
+for reproducibility purposes.
+
+```{r m1}
+system.time(
+
+power_m1 <- min_studies_MADE(mu = c(0.1
+                                    , 0.3
+                                    , 0.5)
+  , tau = c(0.05
+            , 0.1
+            , 0.2)
+  , omega = c(0
+              , 0.1
+              , 0.2
+              , 0.3)
+  , rho = c(0.2
+            , 0.7)
+  , target_power = .8
+  , alpha = 0.05
+  , model = "MLMA"
+  , var_df = "RVE"
+  , sigma2_dist = 200
+  , n_ES_dist = 4
+  , seed = 10052510)
+)
+```
+
+```{r m1 table}
+print(power_m1, n = 72)
+
+power_m1_table <- tibble(power_m1)
+
+View(power_m1_table)
+```
+
+## Running an a priori power analysis for parallel computation
+
+### (1) R determines which option is better
+
+```{r parallel}
+if (parallelly::supportsMulticore()) {
+  plan(multicore) 
+} else {
+  plan(multisession)
+}
+```
+
+```{r}
+availableCores()
+
+availableWorkers()
+```
+
+### (2) Parallel computation determined manually
+
+Test which option works for you better. Ensure to have two cores
+available.
+
+```{r}
+plan(multisession, workers = 10) ## Adjust if necessary
+```
+
+```{r}
+plan(multicore, workers = 10) ## Adjust if necessary
+```
+
+```{r m2}
+system.time(
+  
+power_m2 <- min_studies_MADE(mu = c(0.1
+                                    , 0.3
+                                    , 0.5)
+  , tau = c(0.05
+            , 0.1
+            , 0.2)
+  , omega = c(0
+              , 0.1
+              , 0.2
+              , 0.3)
+  , rho = c(0.2
+            , 0.7)
+  , target_power = .8
+  , alpha = 0.05
+  , model = "MLMA"
+  , var_df = "RVE"
+  , sigma2_dist = 4
+  , n_ES_dist = 4
+  , seed = 10052510)
+)
+```
+
+```{r m2 table}
+print(power_m2, n = 72)
+
+power_m2_table <- tibble(power_m2)
+
+View(power_m2_table)
+```
+
+## Plotting an output for m2 and saving the plot
+
+```{r plottinng}
+png(file = "0_a_priori_power_meta-analysis.png"
+    , width = 3200
+    , height = 2400
+    , res = 300)
+
+plot_MADE(power_m2
+          , y_breaks = c(50
+                         , 500
+                         , 1000
+                         , 1500) ## Adjust
+          , numbers = FALSE)
+
+dev.off()
+```
+
+## Plotting an output for m2 with safe/unsafe areas
+
+```{r plotting with areas}
+png(file = "0_a_priori_areas_power_meta-analysis.png"
+    , width = 3200
+    , height = 2400
+    , res = 300)
+
+plot_MADE(power_m2
+          , power_min = .8
+          , expected_studies = c(50
+                                 , 100
+                                 , 150) ## Adjust
+          , y_breaks = c(50
+                         , 500
+                         , 1000
+                         , 1500) ## Adjust
+          , traffic_light_assumptions = c("unlikely"
+                                          , "likely"
+                                          , "expected"
+                                          , "expected"
+                                          , "expected"
+                                          , "likely"
+                                          , "unlikely")) ## Adjust
+dev.off()
+```
+
+## Saving the power analysis results
+
+```{r saving power analysis}
+write_xlsx(power_m2_table
+           , "power_m2_table.xlsx"
+           , col_names = TRUE
+           , format_headers = FALSE)
+```
+
+## Calculating achieved power
+
+### Preparation
+
+I recommend to use metaplus object to correct for outliers. The
+following code is based on a assumption that effect sizes were
+calculated in metafor.
+
+study_id = IDs of primary studies in a data set
+
+effect_id = unique ID for each effect size in a data set
+
+first_author = a column with the first author of each primary study
+
+```{r loading post-hoc}
+data_abc <- read.csv("data_abc.csv")
+
+View(data_abc)
+```
+
+```{r metaplus outlier}
+abc_res_plus <- metaplus(yi = yi
+                         , sei = sqrt(vi)
+                         , mods = NULL
+                         , slab = publication ## to adjust
+                         , random = "t-dist"
+                         , plotci = TRUE
+                         , justfit = FALSE
+                         , cores = max(detectCores()-2
+                                       , 1)
+                         , data = data_abc)
+```
+
+```{r post-hoc power preparation}
+mABC <- abc_res_plus[["fittedmodel"]]@coef[["muhat"]]
+
+mABC_muhat <- data.frame(muhat = mABC)
+
+tABC <- sqrt(abc_res_plus[["fittedmodel"]]@coef[["tau2"]])
+
+tABC_tau <- data.frame(tau = tABC)
+
+## Creating aggregated data set
+
+data_abc_aggr <- aggregate(first_author ~ study_id
+                                , data = data_abc
+                                , FUN = "min")
+
+data_abc_aggr$n_ES <- aggregate(effect_id ~ study_id
+                           , data = data_abc
+                           , FUN = "length")
+
+data_abc_aggr$n_ES <- data_abc_aggr$n_ES$effect_id
+
+data_abc_aggr$mean_yi <- aggregate(yi ~ study_id
+                                   , data = data_abc
+                                   , FUN = "mean")
+
+data_abc_aggr$mean_vi <- aggregate(vi ~ study_id
+                                   , data = data_abc
+                                   , FUN = "mean")
+
+data_abc_aggr$mean_yi <- data_abc_aggr$mean_yi$yi
+
+data_abc_aggr$mean_vi <- data_abc_aggr$mean_vi$vi
+```
+
+Explanation
+
+J = the number of effect sizes
+
+```{r post-hoc power}
+power_abc <- power_MADE(J = nrow(data_abc_aggr)
+                        , mu = mABC_muhat$muhat
+                        , tau = tABC_tau$tau
+                        , omega = c(0, 0.1, 0.2, 0.3)
+                        , rho = c(0.0, 0.2, 0.7)
+                        , alpha = 0.05
+                        , model = "MLMA"
+                        , var_df = "RVE"
+                        , sigma2_dist = data_abc_aggr$mean_vi
+                        , n_ES_dist = data_abc_aggr$n_ES
+                        , seed = 65741)
+```
+
+```{r}
+print(power_abc)
+```
+
+```{r}
+power_abc_table <- tibble(power_abc)
+
+View(power_abc_table)
+```
+
+### Saving the aggregated data set
+
+```{r}
+write_xlsx(data_abc_aggr
+           , "data_abc_aggr.xlsx"
+           , col_names = TRUE
+           , format_headers = FALSE)
+```
+
+### Saving the post-hoc power data set
+
+```{r writing post-hoc power}
+write_xlsx(power_abc_table
+           , "power_abc_table.xlsx"
+           , col_names = TRUE
+           , format_headers = FALSE)
+```
+
+## Getting citation of the used packages
+
+```{r}
+citation(package = "POMADE")
+citation(package = "future")
+citation(package = "parallel")
+citation(package = "parallelly")
+citation(package = "dplyr")
+```
+
+## References
+
+Hedges, L. V., & Pigott, T. D. (2001). The power of statistical tests
+inmeta-analysis. Psychological Methods, 6(3),
+203–217.<http://doi.org/10.1037/1082-989X.6.3.203>
+
+Vembye, M. H., Pustejovsky, J. E., & Pigott, T. D. (2022). Power
+approximations for overall average effects in meta-analysis
+withdependent effect sizes. Journal of Educational and
+BehavioralStatistics, 1–33. <http://doi.org/10.3102/10769986221127379>
+
+Vembye, M. H., Pustejovsky, J. E., & Pigott, T. D. (2024). Conducting
+Power Analysis for Meta-Analysis of Dependent Effect Sizes: Common
+Guidelines and an Introduction to the POMADE R package. MetaArXiv.
+<https://osf.io/preprints/metaarxiv/3x2en>
