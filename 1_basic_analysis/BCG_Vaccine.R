@@ -43,16 +43,16 @@ meta_fixed <- rma(yi = yi
                   , data = data_transformed
                   , method = "FE")
 
-##To view the analysis, run the line below
+## To view the analysis, run the line below
 meta_fixed
 
 ## This analysis includes basic information, e.g., overall effect size
-##Alternatively
+## Alternatively
 summary(meta_fixed)
 
 install.packages("esc")
 
-library(esc) # We need this package the transform logOR to OR
+library(esc) ## We need this package the transform logOR to OR
 
 odds_ratio(-0.4361)
 
@@ -101,7 +101,7 @@ meta_random_alloc <- rma(yi = yi
                          , data = data_transformed
                          , method = "REML")
 meta_random_alloc
-#However, we do not have control over what is the reference point, and we want
+## However, we do not have control over what is the reference point, and we want
 ## to change it. See a new model below:
 meta_random_alloc <- rma(yi = yi
                          , vi = vi
@@ -238,6 +238,7 @@ funnel(meta_random
 ## Tests for funnel plot asymmetry
 
 ranktest(meta_random) ## rank test
+
 regtest(meta_random) ## Egger's test
 
 ## In principle, non-significant results of the regression analyses
@@ -248,11 +249,12 @@ regtest(meta_random) ## Egger's test
 trimfill(meta_random
          , side = "left") ## For potential studies on the left of
                                      ## the funnel plot
+
 trimfill(meta_random
          , side = "right") ## For potential studies on the right of
                                       ## the funnel plot
 
-## In principle, no studies imputed indicate no support for publication bias.
+## In principle, zero studies imputed indicates no support for publication bias.
 
 ## Basic PET
 PET <- lm(yi ~ sqrt(vi)
@@ -269,6 +271,7 @@ PEESE <- lm(yi ~ vi
             , weights = 1/vi)
 
 summary(PEESE)
+
 confint(PEESE)
 
 ## In principle, non-significant results of PET-PEESE
