@@ -1,7 +1,19 @@
-## Dr. Jacek Buczny, Vrije Universiteit Amsterdam
-## Power Analysis Meta-Analysis for Completely Aggregated Effects
+## Title: (A Priori) Power Analysis Meta-Analysis for Completely Aggregated Effects
+## Author: Dr. Jacek Buczny, Vrije Universiteit Amsterdam
+## Last saved: Feb 20, 2024
 
-require("metapower")
+## Installing the metapower R package
+install.packages("metapower")
+
+## Loading metapower
+library(metapower)
+
+## Simulations for various levels of effect size (here Pearson's r),
+## study size (total N and group n), number of effect sizes, and hetereogeneity
+
+## How to interpret?
+## Use the convention of 80% power
+## Focus on the random-effects estimates
 
 #---
   
