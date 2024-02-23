@@ -13,6 +13,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 
 ### Published
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis" [`OSF materials`](https://osf.io/w3syv/) [`article`](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749)
+- ""[`preregistration`](https://osf.io/4mcnf)[`OSF materials`](https://osf.io/3txav/)[`article`](https://journals.sagepub.com/doi/full/10.1177/1948550619887702)
 
 ### Ongoing
 - "Constant Torque Stretching Increases Range of Motion More than Constant Angle or Dynamic Stretching in Ankle Contractures: A Meta-Analysis" `OSF materials` `article`
