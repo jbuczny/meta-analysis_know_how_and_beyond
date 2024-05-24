@@ -27,6 +27,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 
 ## Publications of My Students
 - "Deferred Cord Clamping to Improve Neonatal Blood Values. A Systematic Review and Meta-Analysis" [`article`](https://www.sciencedirect.com/science/article/pii/S0020748924000300)
+- "The Kernel of Truth in Text-Based Personality Assessment: A Meta-Analysis of the Relations Between the Big Five and the Linguistic Inquiry and Word Count (LIWC)" [`article`](https://doi.org/10.1037/bul0000381)
 
 ## Contact Details
 Dr. Jacek Buczny, j.buczny@vu.nl
