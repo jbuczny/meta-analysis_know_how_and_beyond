@@ -18,11 +18,11 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 ### Ongoing
 - "Constant Torque Stretching Increases Range of Motion More than Constant Angle or Dynamic Stretching in Ankle Contractures: A Meta-Analysis" `OSF materials` `article`
 - "Cold Induced Vasodilation – A Meta-Analysis" `OSF materials` `article`
-- "Desensitization Effect in Gaming" `OSF materials` `article`
+- "Desensitization Effect in Gaming" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=547253) `OSF materials` `article`
 - "Gender Differences in Impostor Feelings: A Meta-Analysis" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443) `OSF materials` `article`
 - "Disgust During COVID-19 Pandemic" `OSF materials` `article`
 - "Does Multidimensional Structure of Work-Family and Family-Work Conflict Matter for Stress, and Job and Family Satisfaction? A Systematic Review with Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=337199) `OSF materials` `article`
-- "Social Relationship Model of Personality" `OSF materials` `article`
+- "Social Relations Model of Personality" `OSF materials` `article`
 - "Systematic Review and Meta-Analysis of the Effects of Fatigue as a Result of Activity on Gait Stability and Fall-Related Spatiotemporal Parameters in Community-Dwelling Elderly" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662) `OSF materials` `article`
 
 ## Publications of My Students
