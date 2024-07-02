@@ -1,0 +1,105 @@
+---
+title: "Transformations to Pearson's r"
+author: "Jacek Buczny"
+date: "latest update: `r format(Sys.time(), '%d %B %Y')`"
+output:
+  word_document: default
+  pdf_document: default
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r loading packages, include = FALSE}
+library(effectsize)
+```
+
+## Cleaning the environment to ensure a clean run
+
+```{r cleaning the enviroment}
+rm(list=ls())
+```
+
+## Converting the effect sizes
+
+### Formulas and functions
+
+#### d to r
+
+$r \approx \frac{d}{\sqrt{d^2 + 4}}$
+
+```{r}
+cohen_d_to_r <- function(d) {
+  r <- d / sqrt(d^2 + 4)
+  return(r)
+}
+```
+
+#### eta-squared to r
+
+$r = \sqrt{\eta^2}$
+
+```{r}
+eta_squared_to_r <- function(eta_squared) {
+  r <- sqrt(eta_squared)
+  return(r)
+}
+```
+
+#### F to r
+
+$r = \sqrt{\frac{F}{F + df}}$
+
+```{r}
+F_test_to_r <- function(F_stat, df_error) {
+  t_stat <- sqrt(F_stat)
+  r <- t_stat / sqrt(t_stat^2 + df_error)
+  return(r)
+}
+```
+
+#### t to r
+
+$r = \frac{t}{\sqrt{t^2 + df}}$
+
+```{r}
+t_test_to_r <- function(t, df) {
+  r <- t / sqrt(t^2 + df)
+  return(r)
+}
+```
+
+#### z to r
+
+$z = \frac{d \cdot \sqrt{N}}{2}$
+
+$z = \frac{r \cdot \sqrt{N}}{\sqrt{1 - r^2}}$
+
+$r = \frac{z}{\sqrt{N + z^2}}$
+
+```{r}
+# Function to calculate r from z and N
+z_test_to_r <- function(z, N) {
+  r <- z / sqrt(N + z^2)
+  return(r)
+}
+```
+
+### Utilizing the effectsize package
+
+```{r}
+d_to_r(0.009)
+sqrt(0.01)
+F_to_r(7.61, 1, 59, ci = 0.95, alternative = "two.sided")
+t_to_r(2.17, 41, ci = 0.95, alternative = "two.sided")
+z_to_r(2.829, 44, ci = 0.95, alternative = "two.sided")
+```
+
+```{r citations}
+citation()
+citation("effectsize")
+```
