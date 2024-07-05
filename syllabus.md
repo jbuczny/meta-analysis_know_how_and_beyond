@@ -99,7 +99,7 @@ The requrse requires approximately 26 hours of preparation.
 - Online live sessions (shared later as recordings)
 - Hands-on approach
 - Approximately 10 hours of pre-recorded lectures
-- Maximum 30 hours of sessions (Q&A, tutorial, and feedback)
+- Maximum 30 hours of sessions (Q&A, tutorials, and feedback)
 - Individualized feedback after each assignment
 
 Finishing this course requires at least six hours of work per day after the course starts on January 10 plus the time needed to watch lectures, reading the recommended literature, incorporating feedback and finishing the final assignment. In total, you will need to spend at least 80 hours to benefit from the course.
