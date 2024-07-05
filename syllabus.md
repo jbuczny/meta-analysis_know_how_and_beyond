@@ -96,7 +96,7 @@ The requrse requires approximately 26 hours of preparation.
 
 - Prerecorded online lectures
 - Working on assignments
-- Online live sessions (shared as recordings)
+- Online live sessions (shared later as recordings)
 - Hands-on approach
 - Approximately 10 hours of pre-recorded lectures
 - Maximum 30 hours of sessions (Q&A, tutorial, and feedback)
