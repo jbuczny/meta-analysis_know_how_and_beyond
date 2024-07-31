@@ -12,6 +12,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 ## Co-Authored Meta-Analytic Projects
 
 ### Published
+- "Fly Ash Application Impacts Master Physicochemical Pedovariables A Multilevel Meta-Analysis" [`OSF materials`](https://osf.io/fqgez/) [`article`](soon)
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis" [`OSF materials`](https://osf.io/w3syv/) [`article`](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749)
 - "A Multilab Replication of the Ego Depletion Effect" [`preregistration`](https://osf.io/4mcnf) [`OSF materials`](https://osf.io/3txav/) [`article`](https://journals.sagepub.com/doi/full/10.1177/1948550619887702)
 
