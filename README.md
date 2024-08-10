@@ -19,7 +19,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 ### Ongoing
 - "Constant Torque Stretching Increases Range of Motion More than Constant Angle or Dynamic Stretching in Ankle Contractures: A Meta-Analysis" `OSF materials` `article`
 - "Cold Induced Vasodilation – A Meta-Analysis" `OSF materials` `article`
-- "Desensitization Effect in Gaming" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=547253) `OSF materials` `article`
+- "Desensitization Effect in Gaming: A Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=547253) `OSF materials` `article`
 - "Gender Differences in Impostor Feelings: A Meta-Analysis" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443) `OSF materials` `article`
 - "Disgust During COVID-19 Pandemic: A Meta-Analysis" `OSF materials` `article`
 - "Does Multidimensional Structure of Work-Family and Family-Work Conflict Matter for Stress, and Job and Family Satisfaction? A Systematic Review with Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=337199) `OSF materials` `article`
