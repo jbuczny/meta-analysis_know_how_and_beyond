@@ -25,7 +25,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 - "Disgust During COVID-19 Pandemic: A Meta-Analysis" `OSF materials` `article`
 - "Does Multidimensional Structure of Work-Family and Family-Work Conflict Matter for Stress, and Job and Family Satisfaction? A Systematic Review with Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=337199) `OSF materials` `article`
 - "Social Relations Model of Personality: A Meta-Analysis" `OSF materials` `article`
-- "Systematic Review and Meta-Analysis of the Effects of Fatigue as a Result of Activity on Gait Stability and Fall-Related Spatiotemporal Parameters in Community-Dwelling Elderly" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662) `OSF materials` `article`
+- "Systematic Review and Meta-Analysis of the Effects of Fatigue as a Result of Activity on Gait Stability and Fall-Related Spatiotemporal Parameters in Community-Dwelling Elderly" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662) [`OSF materials`](https://osf.io/7msxu/) `article`
 
 ## Publications of My Students
 - "Fly Ash Application Impacts Master Physicochemical Pedovariables A Multilevel Meta-Analysis" [`article`](https://www.sciencedirect.com/science/article/pii/S0301479724020528)
