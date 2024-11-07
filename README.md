@@ -12,7 +12,7 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 ## Co-Authored Meta-Analytic Projects
 
 ### Published
-- "Psychometrics of Wearable Devices Measuring Physical Activity in Ambulant Children with Gait Abnormalities: A Systematic Review and Meta-Analysis" [`OSF materials`](https://osf.io/kgse9/) [`article`]
+- "Psychometrics of Wearable Devices Measuring Physical Activity in Ambulant Children with Gait Abnormalities: A Systematic Review and Meta-Analysis" [`OSF materials`](https://osf.io/kgse9/) [`article`](https://www.sciencedirect.com/science/article/pii/S2590109524000971)
 - "Fly Ash Application Impacts Master Physicochemical Pedovariables A Multilevel Meta-Analysis" [`OSF materials`](https://osf.io/fqgez/) [`article`](https://www.sciencedirect.com/science/article/pii/S0301479724020528)
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis" [`OSF materials`](https://osf.io/w3syv/) [`article`](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749)
 - "A Multilab Replication of the Ego Depletion Effect" [`preregistration`](https://osf.io/4mcnf) [`OSF materials`](https://osf.io/3txav/) [`article`](https://journals.sagepub.com/doi/full/10.1177/1948550619887702)
