@@ -28,17 +28,19 @@ library(utils)
 
 ## Introduction
 
-This script is create to simulate power analysis for Pearson's *r*.
+This script was created to simulate power analysis for Pearson's *r*.
 
 It is assumed that 0.1 is small effect size, 0.3 is medium, and 0.5 is
 large effect size.
 
-For a tutorial visit: <https://mikkelvembye.github.io/POMADE/>
+For an additional tutorial visit: <https://mikkelvembye.github.io/POMADE/>
 
 ### Explanation
 
 mu = effect size tau = between-study heterogeneity omega = differences
-(heterogeneity) within studies rho = correlations between effect sizes
+(heterogeneity) within studies
+
+rho = correlations between effect sizes
 within studies
 
 model, CHE = correlated and hierarchical effect sizes model, CE =
