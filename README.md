@@ -7,12 +7,16 @@ This is a repository for my course "Meta-Analysis: Know How and Beyond". Here, y
 
 Visit the official VU [website](https://vu.nl/en/education/professionals/courses-programmes/meta-analysis-know-how-and-beyond) of the course to sign up. Note that if you sign up to the course, you will obtain access to prerecorded lectures, get an opportunity to submit assignments, and receive feedback.
 
+## Additional Materials
+
 <span style="color:grey">This repository contains [additional materials](https://github.com/jbuczny/meta-analysis_know_how_and_beyond/blob/main/additional_materials.md) that expand the course by reflecting the current developments in the field of meta-analysis.</span>
 
 ## Co-Authored Meta-Analytic Projects
 
+Here, you can find links showing the techniques I teach and use in my research. In addition, I keep track of my students' publication record to know how they use the knowledge they learn in my course.
+
 ### Published
-- "Constant Torque Stretching Increases Range of Motion More than Constant Angle or Dynamic Stretching in Ankle Contractures: A Meta-Analysis" [`OSF materials`](https://osf.io/xcf58/) `article`
+- "Constant Torque Stretching Increases Range of Motion More than Constant Angle or Dynamic Stretching in Ankle Contractures: A Meta-Analysis" [`OSF materials`](https://osf.io/xcf58/) [`article`](https://doi.org/10.1016/j.apmr.2024.12.004)
 - "Psychometrics of Wearable Devices Measuring Physical Activity in Ambulant Children with Gait Abnormalities: A Systematic Review and Meta-Analysis" [`OSF materials`](https://osf.io/kgse9/) [`article`](https://www.sciencedirect.com/science/article/pii/S2590109524000971)
 - "Fly Ash Application Impacts Master Physicochemical Pedovariables A Multilevel Meta-Analysis" [`OSF materials`](https://osf.io/fqgez/) [`article`](https://www.sciencedirect.com/science/article/pii/S0301479724020528)
 - "The Effect of Trust in Science and Media Use on Public Opinion on Anthropogenic Climate Change: A Meta-Analysis" [`OSF materials`](https://osf.io/w3syv/) [`article`](https://www.tandfonline.com/doi/full/10.1080/17524032.2023.2280749)
