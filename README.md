@@ -9,7 +9,11 @@ Visit the official VU [website](https://vu.nl/en/education/professionals/courses
 
 ## Additional Materials
 
-<span style="color:grey">This repository contains [additional materials](https://github.com/jbuczny/meta-analysis_know_how_and_beyond/blob/main/additional_materials.md) that expand the course by reflecting the current developments in the field of meta-analysis.</span>
+This repository contains [additional materials](https://github.com/jbuczny/meta-analysis_know_how_and_beyond/blob/main/additional_materials.md) that expand the course by reflecting the current developments in the field of meta-analysis; it includes:
+- Power analysis for multilevel models
+- Consistency analysis
+- Advanced techniques of publication bias detection
+- References to the most recent articles in the field
 
 ## Co-Authored Meta-Analytic Projects
 
