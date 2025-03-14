@@ -20,6 +20,7 @@ This repository contains [additional materials](https://github.com/jbuczny/meta-
 Here, you can find links showing the techniques I teach and use in my research. In addition, I keep track of my students' publication record to know how they use the knowledge they learn in my course.
 
 ### Published
+- "Systematic Review and Meta-Analysis of the Effects of Fatigue as a Result of Activity on Gait Stability and Fall-Related Spatiotemporal Parameters in Community-Dwelling Elderly" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662) [`OSF materials`](https://osf.io/7msxu/) `article`
 - "Constant Torque Stretching Increases Range of Motion More than Constant Angle or Dynamic Stretching in Ankle Contractures: A Meta-Analysis" [`OSF materials`](https://osf.io/xcf58/) [`article`](https://doi.org/10.1016/j.apmr.2024.12.004)
 - "Psychometrics of Wearable Devices Measuring Physical Activity in Ambulant Children with Gait Abnormalities: A Systematic Review and Meta-Analysis" [`OSF materials`](https://osf.io/kgse9/) [`article`](https://www.sciencedirect.com/science/article/pii/S2590109524000971)
 - "Fly Ash Application Impacts Master Physicochemical Pedovariables A Multilevel Meta-Analysis" [`OSF materials`](https://osf.io/fqgez/) [`article`](https://www.sciencedirect.com/science/article/pii/S0301479724020528)
@@ -33,7 +34,6 @@ Here, you can find links showing the techniques I teach and use in my research. 
 - "Disgust During COVID-19 Pandemic: A Meta-Analysis" `OSF materials` `article`
 - "Does Multidimensional Structure of Work-Family and Family-Work Conflict Matter for Stress, and Job and Family Satisfaction? A Systematic Review with Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=337199) `OSF materials` `article`
 - "Social Relations Model of Personality: A Meta-Analysis" `OSF materials` `article`
-- "Systematic Review and Meta-Analysis of the Effects of Fatigue as a Result of Activity on Gait Stability and Fall-Related Spatiotemporal Parameters in Community-Dwelling Elderly" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662) [`OSF materials`](https://osf.io/7msxu/) `article`
 
 ## Publications of My Students
 - "Fly Ash Application Impacts Master Physicochemical Pedovariables A Multilevel Meta-Analysis" [`article`](https://www.sciencedirect.com/science/article/pii/S0301479724020528)
@@ -45,4 +45,4 @@ Here, you can find links showing the techniques I teach and use in my research. 
 Dr. Jacek Buczny, j.buczny@vu.nl
 
 ## Update
-Dec 23, 2024
+Mar 9, 2025
