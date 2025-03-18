@@ -28,7 +28,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 - "A Multilab Replication of the Ego Depletion Effect" [`preregistration`](https://osf.io/4mcnf) [`OSF materials`](https://osf.io/3txav/) [`article`](https://journals.sagepub.com/doi/full/10.1177/1948550619887702)
 
 ### Ongoing
-- "From Waste to Resource: A Multilevel Meta-Analysis of Fly Ash Impact on Macroelements in Soil nnd Plant Yield" `OSF materials` `article`
+- "Recycling fly ash for nutrient recovery and enhanced food production in acidic agroecosystems: A multi-level meta-analysis" `OSF materials` `article`
 - "Cold Induced Vasodilation – A Meta-Analysis" `OSF materials` `article`
 - "Desensitization Effect in Gaming: A Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=547253) `OSF materials` `article`
 - "Gender Differences in Impostor Feelings: A Meta-Analysis" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443) `OSF materials` `article`
