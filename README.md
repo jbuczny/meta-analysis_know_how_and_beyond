@@ -37,6 +37,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 - "A Multilab Replication of the Ego Depletion Effect" [`preregistration`](https://osf.io/4mcnf) [`OSF materials`](https://osf.io/3txav/) [`article`](https://journals.sagepub.com/doi/full/10.1177/1948550619887702)
 
 ### Ongoing
+- "Task-Unrelated Thoughts and Heart Rate Variability: A Systematic Review and Meta-Analysis" `OSF materials` `article`
 - "Recycling Fly Ash for Nutrient Recovery and Enhanced Food Production in Acidic Agroecosystems: A Multi-Level Meta-Analysis" `OSF materials` `article`
 - "Cold Induced Vasodilation – A Meta-Analysis" `OSF materials` `article`
 - "Desensitization Effect in Gaming: A Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=547253) `OSF materials` `article`
