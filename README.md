@@ -23,7 +23,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 
 #### 2025
 
-- "Recycling Fly Ash for Nutrient Recovery and Enhanced Food Production in Acidic Agroecosystems: A Multi-Level Meta-Analysis" [`article`]()  
+- "Recycling Fly Ash for Nutrient Recovery and Enhanced Food Production in Acidic Agroecosystems: A Multi-Level Meta-Analysis" [`article`](https://doi.org/10.1016/j.rser.2025.115925)  
 - "The Effect of Exercise-Induced Muscle Fatigue on Gait Parameters Among Older Adults: A Systematic Review and Meta-Analysis" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=357662) [`OSF materials`](https://osf.io/7msxu/) [`FigShare materials`](https://doi.org/10.21943/auas.25651671) [`article`](https://doi.org/10.1186/s11556-025-00370-1)  
 
 #### 2024
