@@ -58,4 +58,4 @@ Here, you can find links showing the techniques I teach and use in my research. 
 Dr. Jacek Buczny, j.buczny@vu.nl
 
 ## Update
-Mar 9, 2025
+Nov 19, 2025
