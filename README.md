@@ -21,6 +21,10 @@ Here, you can find links showing the techniques I teach and use in my research. 
 
 ### Published
 
+#### 2026
+
+- ...
+
 #### 2025
 
 - "Recycling Fly Ash for Nutrient Recovery and Enhanced Food Production in Acidic Agroecosystems: A Multi-Level Meta-Analysis" [`article`](https://doi.org/10.1016/j.rser.2025.115925)  
