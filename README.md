@@ -23,7 +23,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 
 #### 2026
 
-- "Plant Biomass Responses to PFAS Exposure: A Meta-Analysis with Implications for Phytoremediation in Terrestrial and Aquatic Systems" [`article`](https://doi.org/10.1016/j.jenvman.2026.129217)
+- "Plant Biomass Responses to PFAS Exposure: A Meta-Analysis with Implications for Phytoremediation in Terrestrial and Aquatic Systems" [`article`](https://doi.org/10.1016/j.jenvman.2026.129217)[`data`](https://ars.els-cdn.com/content/image/1-s2.0-S0301479726006778-mmc1.xlsx)
 
 #### 2025
 
