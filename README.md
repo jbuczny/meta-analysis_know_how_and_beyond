@@ -23,7 +23,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 
 #### 2026
 
-- ...
+- "Plant Biomass Responses to PFAS Exposure: A Meta-Analysis with Implications for Phytoremediation in Terrestrial and Aquatic Systems" [`article`](https://doi.org/10.1016/j.jenvman.2026.129217)
 
 #### 2025
 
@@ -42,7 +42,6 @@ Here, you can find links showing the techniques I teach and use in my research. 
 - "A Multilab Replication of the Ego Depletion Effect" [`preregistration`](https://osf.io/4mcnf) [`OSF materials`](https://osf.io/3txav/) [`article`](https://journals.sagepub.com/doi/full/10.1177/1948550619887702)
 
 ### Ongoing
-- "Above- and Belowground Biomass Variation Following Perfluoroalkyl Acids Exposure in Terrestrial and Aquatic Plant Species: A Meta-Analysis" `article`
 - "Task-Unrelated Thoughts and Heart Rate Variability: A Systematic Review and Meta-Analysis" `OSF materials` `article`
 - "Recycling Fly Ash for Nutrient Recovery and Enhanced Food Production in Acidic Agroecosystems: A Multi-Level Meta-Analysis" `OSF materials` `article`
 - "Cold Induced Vasodilation – A Meta-Analysis" `OSF materials` `article`
@@ -53,6 +52,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 - "Social Relations Model of Personality: A Meta-Analysis" `OSF materials` `article`
 
 ## Publications of My Students
+- "Plant Biomass Responses to PFAS Exposure: A Meta-Analysis with Implications for Phytoremediation in Terrestrial and Aquatic Systems" [`article`](https://doi.org/10.1016/j.jenvman.2026.129217)
 - "Recycling Fly Ash for Nutrient Recovery and Enhanced Food Production in Acidic Agroecosystems: A Multi-Level Meta-Analysis" [`article`](https://doi.org/10.1016/j.rser.2025.115925)
 - "Fly Ash Application Impacts Master Physicochemical Pedovariables A Multilevel Meta-Analysis" [`article`](https://www.sciencedirect.com/science/article/pii/S0301479724020528)
 - "Deferred Cord Clamping to Improve Neonatal Blood Values. A Systematic Review and Meta-Analysis" [`article`](https://www.sciencedirect.com/science/article/pii/S0020748924000300)
@@ -63,4 +63,4 @@ Here, you can find links showing the techniques I teach and use in my research. 
 Dr. Jacek Buczny, j.buczny@vu.nl
 
 ## Update
-Dec 30, 2025
+Mar 5, 2026
