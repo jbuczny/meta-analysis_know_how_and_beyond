@@ -47,7 +47,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 - "Recycling Fly Ash for Nutrient Recovery and Enhanced Food Production in Acidic Agroecosystems: A Multi-Level Meta-Analysis" `OSF materials` `article`
 - "Desensitization Effect in Gaming: A Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=547253) `OSF materials` `article`
 - "Gender Differences in Impostor Feelings: A Meta-Analysis" [`preregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=423443) `OSF materials` `article`
-- "Disgust During COVID-19 Pandemic: A Meta-Analysis" `OSF materials` `article`
+- "Disgust During COVID-19 Pandemic: A Meta-Analysis" `pregistration` `OSF materials` `article`
 - "Does Multidimensional Structure of Work-Family and Family-Work Conflict Matter for Stress, and Job and Family Satisfaction? A Systematic Review with Meta-Analysis" [`pregistration`](https://www.crd.york.ac.uk/prospero/display_record.php?RecordID=337199) `OSF materials` `article`
 - "Social Relations Model of Personality: A Meta-Analysis" `OSF materials` `article`
 
