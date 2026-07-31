@@ -59,7 +59,7 @@ Here, you can find links showing the techniques I teach and use in my research. 
 - "The Kernel of Truth in Text-Based Personality Assessment: A Meta-Analysis of the Relations Between the Big Five and the Linguistic Inquiry and Word Count (LIWC)" [`article`](https://doi.org/10.1037/bul0000381)
 - "A Meta-Analysis on the Debt-Growth Relationship"[`article`](https://mpra.ub.uni-muenchen.de/114409/1/MPRA_paper_114409.pdf)
 
-## Meta-analytic grants
+## Meta-Analytic grants
 
 - ~ €200,000 from https://hrzz.hr for the project "Metal Transfer in Agroecosystems: A Global Meta- Analysis with Predictive Modelling and Experimental Validation"
 
